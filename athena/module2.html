@@ -1,0 +1,118 @@
+<!Doctype html>
+
+<html>
+	<head>
+	
+	
+	
+	
+	</head>
+
+	<body>
+		<!Doctype html>
+
+<html>
+<!--the objective of this exercise is to come up with an object that will move within a canvas everytime an arrow is preseed.-->
+
+	<head>
+		
+
+
+	</head>
+	
+	<body onload="hello()">
+
+	<canvas id='drawingBoard'></canvas>
+		
+		<script>
+			var getCanvas=document.getElementById('drawingBoard');
+			var drawCommand=getCanvas.getContext('2d');
+			
+			getCanvas.height=window.screen.height;
+			getCanvas.width=window.screen.width;
+		
+			function randomShapes() {
+
+				//var xRan=Math.random()*10000;
+				//var yRan=Math.random()*1000;
+				
+				drawCommand.fillStyle="yellow";
+				//drawCommand.fillRect(xRan,yRan,5,5);
+			}
+			setInterval(randomShapes,100);
+	
+			function randomShapes2() {
+
+				//var xRan=Math.random()*10000;
+				//var yRan=Math.random()*1000;
+				
+				
+			
+				drawCommand.fillStyle="blue";
+				//drawCommand.fillRect(xRan,yRan,5,5);
+	
+			}
+			setInterval(randomShapes2,200);
+			
+			
+			function randomShapes3() {
+
+				//var xRan=Math.random()*10000;
+				//var yRan=Math.random()*1000;
+				
+				
+			
+				drawCommand.fillStyle="green";
+				//drawCommand.fillRect(xRan,yRan,5,5);
+	
+			}
+			setInterval(randomShapes,3000);
+			
+			function randomShapes4() {
+
+				//var xRan=Math.random()*10000;
+				//var yRan=Math.random()*1000;
+				
+				
+			
+				drawCommand.fillStyle="red";
+				//drawCommand.fillRect(xRan,yRan,5,5);
+	
+			}
+			setInterval(randomShapes4,4000);
+			
+			function randomShapes5() {
+
+				//var xRan=Math.random()*10000;
+				//var yRan=Math.random()*1000;
+				
+				
+			
+				drawCommand.fillStyle="black"
+				//drawCommand.fillRect(xRan,yRan,5,5);
+	
+			}
+			setInterval(randomShapes5,5000);
+			
+			function hello() {
+				drawCommand.font="150px Arial";
+				drawCommand.fillText("ermotech|post",350,500);
+			
+			}
+			setInterval(hello,5000);
+		
+		</script>
+	
+	</body>
+
+
+
+
+
+</html>
+	
+	
+	
+	</body>
+
+</html>

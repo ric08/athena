@@ -1,0 +1,109 @@
+<!Doctype html>
+
+<html>
+<!--the objective of this exercise is to come up with an object that will move within a canvas everytime an arrow is preseed.-->
+
+	<head>
+		
+
+
+	</head>
+	
+	<body>
+	
+	<canvas id='drawingBoard' width="1000px" height="500px" style="border: solid;background-color:black">
+	</canvas>
+	
+	<button onClick="moveRight()" >Right</button>
+	<button onClick="moveLeft()" >Left</button>
+	<button onClick="moveUp()" >Up</button>
+	<button onClick="moveDown()" >Down</button>
+		
+		<script>
+			var getCanvas=document.getElementById('drawingBoard');
+			var drawCommand=getCanvas.getContext('2d');
+			
+		
+			
+			var xbox=970;
+			var ybox=470;
+			
+			drawCommand.fillStyle="green";
+			drawCommand.fillRect(xbox,ybox,30,30);
+			
+			drawCommand.beginPath();
+			drawCommand.arc(40,40,40,0,2*Math.PI);
+			drawCommand.stroke();
+			drawCommand.fillStyle="blue";
+			drawCommand.fill();
+			
+			function moveRight() {
+				drawCommand.clearRect(xbox,ybox,30,30);
+				
+				xbox+=10;
+			
+				
+				drawCommand.fillStyle="green";
+				drawCommand.fillRect(xbox,ybox,30,30);
+			
+			};
+			
+			function moveLeft() {
+				drawCommand.clearRect(xbox+1,ybox,30,30);
+				
+				xbox-=10;
+				
+				drawCommand.fillStyle="green";
+				drawCommand.fillRect(xbox,ybox,30,30);
+				
+			
+			};
+			
+			function moveUp() {
+				drawCommand.clearRect(xbox,ybox,30,30);
+				
+				ybox-=10;
+				
+				drawCommand.fillStyle="green";
+				drawCommand.fillRect(xbox,ybox,30,30);
+				
+			
+			};
+			
+			function moveDown() {
+				drawCommand.clearRect(xbox,ybox,30,30);
+				
+				ybox+=10;
+				
+				drawCommand.fillStyle="green";
+				drawCommand.fillRect(xbox,ybox,30,30);
+				
+			
+			};
+			
+			function randomShapes() {
+
+				var xRan=(Math.random()*940)+60;
+				var yRan=(Math.random()*441)+60;
+				
+				
+			
+				drawCommand.fillStyle="blue";
+				drawCommand.fillRect(xRan,yRan,20,20);
+				
+				drawCommand.fillStyle="yellow";
+				drawCommand.fillRect(xRan,yRan,20,20);
+			}
+			setInterval(randomShapes,2);
+			
+		
+		</script>
+	
+	
+	</body>
+
+
+
+
+
+</html>
